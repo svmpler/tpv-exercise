@@ -11,18 +11,21 @@ public class TransactionBuilder {
 
     }
 
-    public void setAmountInCents(int amountInCents) {
+    public TransactionBuilder amountInCents(int amountInCents) {
         this.amountInCents = amountInCents;
+
         return this;
     }
 
-    public void setCard(Card card) {
+    public TransactionBuilder Card(Card card) {
         this.card = card;
+
         return this;
     }
 
-    public void setLocalDateTime(LocalDateTime localDateTime) {
+    public TransactionBuilder LocalDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
+
         return this;
     }
     public Transaction build(){

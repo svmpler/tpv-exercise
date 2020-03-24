@@ -25,7 +25,7 @@ public final class Transaction {
         return localDateTime;
     }
 
-    public static TransactionBuilder(){
+    public static TransactionBuilder builder(){
         return new TransactionBuilder();
     }
 }
