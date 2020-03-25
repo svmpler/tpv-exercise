@@ -17,13 +17,13 @@ public class TransactionBuilder {
         return this;
     }
 
-    public TransactionBuilder Card(Card card) {
+    public TransactionBuilder card(Card card) {
         this.card = card;
 
         return this;
     }
 
-    public TransactionBuilder LocalDateTime(LocalDateTime localDateTime) {
+    public TransactionBuilder localDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
 
         return this;
