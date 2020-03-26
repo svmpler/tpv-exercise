@@ -1,21 +1,22 @@
 package oop.inheritance.verifone.v240m;
 
-public class VerifoneV240mDisplay {
+//Logger//
+public class VerifoneV240mDisplay{
 
-    /**
-     * Prints a message to specied position
-     *
-     * @param x       horizontal position
-     * @param y       vertical position
-     * @param message message to be printed
-     */
+    private static VerifoneV240mDisplay instance;
+
+    private VerifoneV240mDisplay(){
+    }
+
+    public static VerifoneV240mDisplay getInstance(){
+        if(instance == null)
+            instance = new VerifoneV240mDisplay();
+        return instance;
+    }
+
     public void showMessage(int x, int y, String message) {
     }
 
-    /**
-     * Clears the screen
-     */
     public void clear() {
-
     }
 }

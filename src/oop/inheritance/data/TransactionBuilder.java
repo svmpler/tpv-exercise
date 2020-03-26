@@ -7,8 +7,7 @@ public class TransactionBuilder {
     private Card card;
     private LocalDateTime localDateTime;
 
-    TransactionBuilder{
-
+    TransactionBuilder(){
     }
 
     public TransactionBuilder amountInCents(int amountInCents) {
@@ -29,6 +28,6 @@ public class TransactionBuilder {
         return this;
     }
     public Transaction build(){
-        return new Transaction();
+        return new Transaction(amountInCents,card,localDateTime);
     }
 }

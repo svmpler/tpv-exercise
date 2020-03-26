@@ -5,6 +5,19 @@ import oop.inheritance.data.TransactionResponse;
 
 public class IngenicoEthernet {
 
+    private static  IngenicoEthernet instance;
+
+    private IngenicoEthernet(){
+
+    }
+
+    public static IngenicoEthernet getInstance() {
+        if(instance == null)
+            instance = new IngenicoEthernet();
+
+        return instance;
+    }
+
     /**
      * Opens a connection using the ethernet device
      *
@@ -21,7 +34,7 @@ public class IngenicoEthernet {
      * @param transaction message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(Transaction transaction) {
+    public boolean send(Transaction transaction){
         return true;
     }
 
@@ -30,7 +43,7 @@ public class IngenicoEthernet {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public TransactionResponse receive() {
+    public TransactionResponse receive(){
         return new TransactionResponse(true, "12314");
     }
 

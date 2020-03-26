@@ -5,6 +5,17 @@ import oop.inheritance.data.TransactionResponse;
 
 public class IngenicoModem {
 
+    private static  IngenicoModem instance;
+
+    private IngenicoModem(){
+
+    }
+
+    public static IngenicoModem getInstance(){
+        if(instance == null)
+            instance = new IngenicoModem();
+        return instance;
+    }
     /**
      * Opens a connection using the modem device
      *
@@ -21,7 +32,7 @@ public class IngenicoModem {
      * @param message message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(Transaction message) {
+    public boolean send(Transaction message){
         return true;
     }
 
@@ -30,14 +41,14 @@ public class IngenicoModem {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public TransactionResponse receive() {
+    public TransactionResponse receive(){
         return new TransactionResponse(true, "132123");
     }
 
     /**
      * Closes the channel releasing every used resources
      */
-    public void close() {
+    public void close(){
 
     }
 }
